@@ -1,0 +1,110 @@
+{% extends "shop/base.html" %}
+{% load static %}
+{% load i18n %}
+{% load embed_video_tags %}
+{% block content %}
+{% for product in products %}
+     <div class="container-fluid">
+
+
+            <!--Section: Products v.2-->
+            <section class="section">
+
+
+
+                <!--First row-->
+                <div class="row">
+
+
+
+
+                    <!--/First column-->
+
+                    <!--Second column-->
+                    <div class="col-lg-6 col-md-6 mb-r wow zoomInLeft" data-wow-delay="0.3s">
+
+                        <!--Card-->
+                        <div class="card card-cascade narrower">
+
+                            <!--Card image-->
+                            <div class="example z-depth-5">
+                            <div class="embed-responsive embed-responsive-16by9">
+    {% video product.video 'medium' %}
+        </div>
+                                </div>
+                            <!--/.Card image-->
+
+                            <!--Card content-->
+                            <div class="card-block text-xs-center">
+                                <!--Category & Title-->
+
+                                <h4 class="card-title"><strong><a href="{{ product.get_absolute_url }}">{% trans "Great thoughts" %}</a></strong></h4>
+
+                                <!--Description-->
+                                <p class="card-text">{{ product.anecdot }}
+                                </p>
+
+
+
+                            </div>
+                            <!--/.Card content-->
+
+                        </div>
+                        <!--/.Card-->
+
+                    </div>
+                    <!--/Second column-->
+
+                    <!--Third column-->
+                    <div class="col-lg-6 col-md-6 mb-r wow zoomInRight" data-wow-delay="0.4s">
+
+                        <!--Card-->
+                        <div class="card card-cascade narrower">
+
+                            <!--Card image-->
+                            <div class="view overlay hm-stylish-strong ">
+                                <img src="{{ product.image.url }}" class="img-fluid" alt="">
+                                <a href="{{ product.get_absolute_url }}">
+                                    <div class="text-xs-center">
+                                    <div class="mask pattern-2"><p id="textmask" class="card-text">{{ product.body|truncatewords_html:30 }}
+                                </p>
+                                        </div>
+
+
+</div>
+                                </a>
+                            </div>
+                            <!--/.Card image-->
+
+                            <!--Card content-->
+                            <div class="card-block text-xs-center">
+                                <!--Category & Title-->
+
+                                <h4 class="card-title"><strong><a href="{{ product.get_absolute_url }}">{{ product.name }}</a></strong></h4>
+
+                                <!--Description-->
+
+<a class="btn btn-outline-success waves-effect" href="{{ product.get_absolute_url }}">{% trans 'Read more ... ' %}</a>
+
+
+                            </div>
+                            <!--/.Card content-->
+
+                        </div>
+                        <!--/.Card-->
+
+                    </div>
+                    <!--/Third column-->
+
+
+                </div>
+                <!--/First row-->
+
+            </section>
+               <hr class="between-sections">
+
+
+
+       </div>
+    {% endfor %}
+   {% endblock %}

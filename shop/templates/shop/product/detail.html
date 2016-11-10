@@ -1,0 +1,101 @@
+ {% extends "shop/base.html" %}
+{% load static %}
+{% load i18n %}
+{% block title %}
+    {{ product.name }}
+{% endblock %}
+
+{% block content %}
+  <div class="container-fluid">
+            <div class="row">
+
+                <!--Post column-->
+                <div class="col-md-9">
+
+
+<!--Card Dark-->
+
+<!--Card-->
+<div class="card  wow bounceInUp" data-wow-delay="0.4s">
+
+    <!--Card image-->
+    <img class="img-fluid" src="{% static 'img/photo/maxresdefault.jpg' %}" alt="Card image cap">
+    <!--/.Card image-->
+
+    <!--Card content-->
+    <div class="card-block">
+
+        <!--Title-->
+        <h4 class="card-title">{{ product.name }}</h4>
+        <!--Text-->
+        <p class="card-text">{{ product.body }}</p>
+
+    </div>
+    <!--/.Card content-->
+
+</div>
+<!--/.Card-->
+
+    <!--/.Card content-->
+
+
+                    </div>
+<!--/.Card Dark-->
+
+                                <!--Image column-->
+
+                                <div  id="cardcolor"  class="card col-md-3 col-xs-12 " >
+
+    <!--Card image-->
+    <div class="view overlay hm-white-slight wow bounceInDown" data-wow-delay="0.4s">
+       <div  class="text-xs-center">
+                                    <img  class=" img-fluid  z-depth-2"  src="{% static 'img/photo/supavatar.JPG' %}">
+                                                </div>
+        <a>
+            <div class="mask"></div>
+        </a>
+    </div>
+    <!--/.Card image-->
+
+    <!--Button-->
+
+
+    <!--Card content-->
+    <div class="card-block">
+        <!--Title-->
+        <h4 class="card-title">{% trans 'Dmitry Gorbachev' %}</h4>
+        <hr>
+        <!--Text-->
+        <p class="card-text">{% trans "Full Stack Web developer , scills= Python, Django,Posgres,AWS amason, Jquery, HTML, CSS, MDBBootstrap, GIT..." %}</p>
+    </div>
+    <!--/.Card content-->
+
+    <!-- Card footer -->
+    <div class="card-data">
+        <ul>
+            <li><i class="fa fa-clock-o"></i>{{ product.created }}</li>
+            <li><a href="#"><i class="fa fa-comments-o"></i>12</a></li>
+            <li><a href="#"><i class="fa fa-facebook"> </i>21</a></li>
+            <li><a href="#"><i class="fa fa-twitter"> </i>5</a></li>
+        </ul>
+    </div>
+    <!-- Card footer -->
+
+</div>
+                                    </div>
+
+                    </div>
+
+
+
+                                <!--/.Content column-->
+
+
+                    <!--/Section: Post-->
+
+                    <!--Section: About author-->
+
+
+
+
+{% endblock %}

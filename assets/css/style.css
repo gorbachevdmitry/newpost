@@ -1,0 +1,59 @@
+/* YOUR CUSTOM STYLES */
+/* YOUR CUSTOM STYLES */
+
+body {
+        background: url("../img/photo/dictionary-1619740_960_720.jpg")no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+   #text {
+       font-weight: bold;
+       color: #FFD700;
+   }
+   #textmask {
+       font-weight: bold;
+       color: #FFD700;
+       position: absolute;
+        top:50%;}
+
+#tex {
+   font-weight: bold;
+    color: #FFD700;
+    text-transform: uppercase;
+}
+#detop {
+    opacity: 0.8;
+  filter: alpha(opacity=80);
+
+}
+#detop p{
+
+
+
+
+}
+#wrapcol {
+    background-color: #bdbdbd;
+    font-size: smaller;
+    padding: 35px;
+    margin: auto;
+    opacity: .8;
+    filter: alpha(opacity=80);
+}
+
+#wrapcol p
+{
+font-weight: bold;
+}
+
+#imgdet {
+    border-radius: 60%;
+    width: 100%;
+    height: auto;
+
+}
+#cardcolor {
+    background-color: transparent;
+}
